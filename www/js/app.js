@@ -32,42 +32,95 @@ angular.module('benefitsApp', ['ionic', 'benefitsApp.controllers', 'benefitsApp.
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.dashboard', {
+    url: '/dashboard',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/dashboard.html',
+        controller: 'DashboardCtrl'
       }
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
-      }
-    })
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
+  .state('app.company', {
+    url: '/company',
     views: {
       'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
+        templateUrl: 'templates/company.html',
+        controller: 'CompanyCtrl'
       }
     }
-  });
+  })
+
+  .state('app.services', {
+    url: '/services',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/services.html',
+        controller: 'ServicesCtrl'
+      }
+    }
+  })
+
+  .state('app.benefits', {
+    url: '/benefits',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/benefits.html',
+        controller: 'BenefitsCtrl'
+      }
+    }
+  })
+
+  .state('app.employees', {
+    url: '/employees',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/employees.html',
+        controller: 'EmployeesCtrl'
+      }
+    }
+  })
+
+  .state('app.compliance', {
+    url: '/compliance',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/compliance.html',
+        controller: 'ComplianceCtrl'
+      }
+    }
+  })
+
+  .state('app.settings', {
+    url: '/settings',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/settings.html',
+        controller: 'SettingsCtrl'
+      }
+    }
+  })
+
+  .state('app.help', {
+    url: '/help',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/help.html',
+        controller: 'HelpCtrl'
+      }
+    }
+  })
+
+  .state('app.logout', {
+    url: '/logout',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/logout.html',
+        controller: 'LogoutCtrl'
+      }
+    }
+  })
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/dashboard');
 });

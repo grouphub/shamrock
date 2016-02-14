@@ -1,0 +1,16 @@
+<ion-view view-title="Dashboard">
+  <ion-content>
+    <ion-list>
+      <div class="card" ng-repeat="card in cards">
+        <div class="item item-text-wrap">
+          <div class="card-title">
+          	{{card.title}}
+          </div>
+          <div class="card-body">
+          	<p>{{card.body}}</p>
+          </div>
+        </div>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

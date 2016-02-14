@@ -1,0 +1,11 @@
+.button-clear.button-icon {
+    color: #fff;
+}
+
+.bar-custom {
+	border-color: #b2b2b2;
+	background-color: $colorBrand;
+	background-image: linear-gradient(to right, darken($colorBrand, 10%) 10%, $colorBrand 100%);
+	background-size: cover;
+	color: #fff;
+}

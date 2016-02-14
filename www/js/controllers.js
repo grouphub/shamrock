@@ -41,16 +41,69 @@ angular.module('benefitsApp.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Hip Hop', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+.controller('DashboardCtrl', function($scope) {
+  $scope.cards = [
+    { title: 'Alerts', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
+    { title: 'Activity', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
+    { title: 'Recommend', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' }
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-});
+.controller('CompanyCtrl', function($scope) {
+  $scope.cards = [
+    { title: 'Alerts', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
+    { title: 'Activity', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
+    { title: 'Recommend', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' }
+  ];
+})
+
+.controller('ServicesCtrl', function($scope) {
+  $scope.cards = [
+    { title: 'Alerts', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
+    { title: 'Activity', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
+    { title: 'Recommend', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' }
+  ];
+})
+
+.controller('BenefitsCtrl', function($scope) {
+  $scope.cards = [
+    { title: 'Alerts', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
+    { title: 'Activity', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
+    { title: 'Recommend', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' }
+  ];
+})
+
+.controller('EmployeesCtrl', function($scope) {
+  $scope.cards = [
+    { title: 'Alerts', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
+    { title: 'Activity', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
+    { title: 'Recommend', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' }
+  ];
+})
+
+.controller('ComplianceCtrl', function($scope) {
+  $scope.cards = [
+    { title: 'Alerts', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
+    { title: 'Activity', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
+    { title: 'Recommend', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' }
+  ];
+})
+
+.controller('SettingsCtrl', function($scope) {
+  $scope.cards = [
+    { title: 'Alerts', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
+    { title: 'Activity', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
+    { title: 'Recommend', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' }
+  ];
+})
+
+.controller('HelpCtrl', function($scope) {
+  $scope.cards = [
+    { title: 'Alerts', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
+    { title: 'Activity', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
+    { title: 'Recommend', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' }
+  ];
+})
+
+.controller('LogoutCtrl', function($scope) {
+})
