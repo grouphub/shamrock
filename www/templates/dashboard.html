@@ -4,10 +4,41 @@
       <div class="card" ng-repeat="card in cards">
         <div class="item item-text-wrap">
           <div class="card-title">
-          	{{card.title}}
+          	<div class="title">{{card.title}}</div>
+            <div class="notifications" ng-class="card.alert ? 'has-alert' : ''">{{card.notifications}}</div>
           </div>
-          <div class="card-body">
+          <div class="card-body" ng-class="card.list ? 'has-list' : 'has-text'">
+            <div ng-class="card.advice ? 'has-image' : 'no-image'"></div>
+            <h1>{{card.subTitle}}</h1>
           	<p>{{card.body}}</p>
+            <ul>
+              <li class="notifications-list">
+                <div class="list-info">
+                  <div class="list-title">
+                    Used Sick Days
+                  </div>
+                  <div class="list-type">
+                    Sick Day
+                  </div>
+                </div>
+                <div class="list-count">
+                  5 Days
+                </div>
+              </li>
+              <li class="notifications-list">
+                <div class="list-info">
+                  <div class="list-title">
+                    Used Sick Days
+                  </div>
+                  <div class="list-type">
+                    Sick Day
+                  </div>
+                </div>
+                <div class="list-count">
+                  5 Days
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

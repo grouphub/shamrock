@@ -1,8 +1,37 @@
-ion-side-menu {
-	ion-item {
+$colorSidebar: #21272C;
+$userImageSize: 38px;
+
+ion-side-menu.menu {
+	background-color: $colorSidebar;
+	ion-item.item {
+		background: transparent;
+		border: 0 none;
 		a {
+			background: transparent;
+			color: #f5f5f5;
 			text-decoration: none;
-			color: inherit;
+			&.activated {
+				background-color: darken($colorSidebar, 10%);
+				border: 0 none;
+			}
+		}
+		.user {
+			display: flex;
+			align-items: center;
+			margin-top: 20px; 
+			.user-image {
+				width: $userImageSize;
+				height: $userImageSize;
+				background-size: $userImageSize;
+				background-image: url('../img/128.jpg');
+				border-radius: 100%;
+				margin-right: 10px;
+				background-position: center;
+				border: 2px solid #33BA9B;
+			}
+			.user-name {
+
+			}
 		}
 	}
 }

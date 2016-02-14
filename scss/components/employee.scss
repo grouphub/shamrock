@@ -1,0 +1,20 @@
+.employee-item {
+	display: flex;
+	align-items: center;
+	border: 0;
+	.employee-image {
+		height: 45px;
+		width: 45px;
+		background-color: #eee;
+		background-size: contain;
+		border-radius: 100%;
+		margin-right: 15px;
+	}
+	.employee-name {
+		font-size: 1.1em;
+	}
+	.employee-title {
+		font-size: 0.8em;
+		color: #777;
+	}
+}

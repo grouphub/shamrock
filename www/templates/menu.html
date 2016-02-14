@@ -13,29 +13,32 @@
   </ion-side-menu-content>
 
   <ion-side-menu side="left">
-    <!-- <ion-header-bar class="bar-custom">
-      <h1 class="title">Left</h1>
-    </ion-header-bar> -->
     <ion-content>
       <ion-list>
+        <ion-item menu-close ng-href="#/app/dashboard">
+          <div class="user">
+            <div class="user-image"></div>
+            <div class="user-name">Michael Aubry</div>
+          </div>
+        </ion-item>
         <ion-item menu-close ng-href="#/app/dashboard">
           Dashboard
         </ion-item>
         <ion-item menu-close ng-href="#/app/company">
           Company
         </ion-item>
-        <ion-item menu-close ng-href="#/app/services">
+        <!-- <ion-item menu-close ng-href="#/app/services">
           Services
-        </ion-item>
-        <ion-item menu-close ng-href="#/app/benefits">
+        </ion-item> -->
+        <!-- <ion-item menu-close ng-href="#/app/benefits">
           Benefits
-        </ion-item>
+        </ion-item> -->
         <ion-item menu-close ng-href="#/app/employees">
           Employees
         </ion-item>
-        <ion-item menu-close ng-href="#/app/compliance">
+        <!-- <ion-item menu-close ng-href="#/app/compliance">
           Compliance
-        </ion-item>
+        </ion-item> -->
         <ion-item menu-close ng-href="#/app/settings">
           Settings
         </ion-item>
@@ -44,6 +47,9 @@
         </ion-item>
         <ion-item menu-close ng-href="#/app/logout">
           Logout
+        </ion-item>
+        <ion-item menu-close ng-href="#/app/login">
+          Login
         </ion-item>
         <!-- <ion-item menu-close ng-click="login()">
           Login

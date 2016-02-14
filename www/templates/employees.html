@@ -1,16 +1,15 @@
 <ion-view view-title="Employees">
   <ion-content>
     <ion-list>
-      <div class="card" ng-repeat="card in cards">
-        <div class="item item-text-wrap">
-          <div class="card-title">
-          	{{card.title}}
-          </div>
-          <div class="card-body">
-          	<p>{{card.body}}</p>
-          </div>
+
+      <div class="employee-item item" ng-repeat="employee in employees">
+        <div class="employee-image" style="background-image: url('./img/faces/{{$index}}.jpg')"></div>
+        <div class="employee-info">
+          <div class="employee-name">{{employee.name}}</div>
+          <div class="employee-title">{{employee.title}}</div>
         </div>
       </div>
+
     </ion-list>
   </ion-content>
 </ion-view>

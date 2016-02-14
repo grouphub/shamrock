@@ -1,13 +1,22 @@
 <ion-view view-title="Company">
   <ion-content>
     <ion-list>
-      <div class="card" ng-repeat="card in cards">
+      <div class="card">
         <div class="item item-text-wrap">
-          <div class="card-title">
-          	{{card.title}}
+          <div class="company-logo">
+            <img ng-src="./img/{{company.logo}}"/>
           </div>
-          <div class="card-body">
-          	<p>{{card.body}}</p>
+          <div class="company-name">
+             {{company.name}}
+          </div>
+          <div class="company-location company-meta">
+            Location: <span>{{company.location}}</span>
+          </div>
+          <div class="company-tax company-meta">
+            Federal Tax: <span>782930574</span>
+          </div>
+          <div class="company-bank company-meta">
+            Location: <span>7824-42442-4242</span>
           </div>
         </div>
       </div>

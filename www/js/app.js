@@ -4,10 +4,15 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('benefitsApp', ['ionic', 'benefitsApp.controllers', 'benefitsApp.factory'])
+angular.module('benefitsApp', ['ionic', 'benefitsApp.controllers', 'benefitsApp.services'])
+
+.constant('params', {
+  'server': 'http://192.168.169.10:3000'
+})
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
+
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins.Keyboard) {
@@ -17,12 +22,16 @@ angular.module('benefitsApp', ['ionic', 'benefitsApp.controllers', 'benefitsApp.
     }
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
-      StatusBar.styleDefault();
+      StatusBar.styleLightContent();
     }
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
+
+  $httpProvider.defaults.useXDomain = true;
+  delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
   $stateProvider
 
   .state('app', {
@@ -30,6 +39,17 @@ angular.module('benefitsApp', ['ionic', 'benefitsApp.controllers', 'benefitsApp.
     abstract: true,
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
+  })
+
+  // Control state with login
+  .state('app.login', {
+    url: '/login',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/login.html',
+        controller: 'LoginCtrl'
+      }
+    }
   })
 
   .state('app.dashboard', {
@@ -122,5 +142,5 @@ angular.module('benefitsApp', ['ionic', 'benefitsApp.controllers', 'benefitsApp.
     }
   })
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/dashboard');
+  $urlRouterProvider.otherwise('/app/login');
 });

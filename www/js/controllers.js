@@ -9,52 +9,34 @@ angular.module('benefitsApp.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  // Form data for the login modal
-  $scope.loginData = {};
+})
 
-  // Create the login modal that we will use later
-  $ionicModal.fromTemplateUrl('templates/login.html', {
-    scope: $scope
-  }).then(function(modal) {
-    $scope.modal = modal;
-  });
+.controller('LoginCtrl', function($scope, $state, $ionicViewService) {
+  
+  $ionicViewService.nextViewOptions({
+            disableAnimate: true,
+            disableBack: true
+          });
 
-  // Triggered in the login modal to close it
-  $scope.closeLogin = function() {
-    $scope.modal.hide();
-  };
-
-  // Open the login modal
   $scope.login = function() {
-    $scope.modal.show();
-  };
+    $state.go('app.dashboard');
+  }
 
-  // Perform the login action when the user submits the login form
-  $scope.doLogin = function() {
-    console.log('Doing login', $scope.loginData);
-
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
-    $timeout(function() {
-      $scope.closeLogin();
-    }, 1000);
-  };
 })
 
 .controller('DashboardCtrl', function($scope) {
   $scope.cards = [
-    { title: 'Alerts', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
-    { title: 'Activity', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
-    { title: 'Recommend', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' }
+    { title: 'Alerts', 'subTitle': '', body: 'Your spending budget is low.', notifications: 1, alert: true },
+    { title: 'Notifications', 'subTitle': '', list: true },
+    { title: 'Advice', advice: true, 'subTitle': '$1500 paid vacation with Capital One', body: 'Enjoy a nice vacation with your usage of Capital One rewards card.' }
   ];
 })
 
-.controller('CompanyCtrl', function($scope) {
-  $scope.cards = [
-    { title: 'Alerts', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
-    { title: 'Activity', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
-    { title: 'Recommend', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' }
-  ];
+.controller('CompanyCtrl', function($scope, DataFactory) {
+  // DataFactory.company().then(function(company) {
+  //   console.log(company)
+  // });
+  $scope.company = {'logo': 'g.jpg', 'name': 'Google', 'location': 'Amphitheatre Parkway Mountain View'}
 })
 
 .controller('ServicesCtrl', function($scope) {
@@ -73,12 +55,69 @@ angular.module('benefitsApp.controllers', [])
   ];
 })
 
-.controller('EmployeesCtrl', function($scope) {
-  $scope.cards = [
-    { title: 'Alerts', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
-    { title: 'Activity', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' },
-    { title: 'Recommend', body: 'bun tacos vice occupy narwhal slow-carb four dollar toast. Microdosing health goth blue bottle, four dollar toast narwhal PBR&B post-ironic celiac fap tofu. Four dollar toast selfies flexitarian ethical, blue bottle +1 letterpress intelligentsia food truck.' }
-  ];
+.controller('EmployeesCtrl', function($scope, DataFactory) {
+  // DataFactory.employees().then(function(employees) {
+  //   if(employees.data) {
+  //     $scope.employees = employees.data.Employee;
+  //   }
+  // });
+  $scope.employees = [{
+                   name: "John Wilson",
+                   title: "Jr Engineer",
+                   hired: "10/12/16",
+                   imgSrc: "1.jpg"
+               },
+               {
+                   name: "Sam Jackson",
+                   title: "Jr Engineer",
+                   hired: "10/12/16",
+                   imgSrc:"2.jpg"
+               },
+               {
+                   name: "Ryan Reynolds",
+                   title: "Jr Engineer",
+                   hired: "10/12/16",imgSrc:"3.jpg"
+               },
+               {
+                   name: "Luke Wilson",
+                   title: "Jr Engineer",
+                   hired: "10/12/16",imgSrc:"4.jpg"
+               },
+               {
+                   name: "Frank Manja",
+                   title: "Jr Engineer",
+                   hired: "10/12/16",
+                   imgSrc:"5.jpg"
+               },
+               {
+                   name: "Holy Capone",
+                   title: "Jr Engineer",
+                   hired: "10/12/16",
+                   imgSrc:"6.jpg"
+               },
+               {
+                   name: "Kye Holy",
+                   title: "Jr Engineer",
+                   hired: "10/12/16",
+                   imgSrc:"7.jpg"
+               },
+               {
+                   name: "Molly Capone",
+                   title: "Jr Engineer",
+                   hired: "10/12/16",
+                   imgSrc:"8.jpg"
+               },
+               {
+                   name: "Reynolds Capone",
+                   title: "Jr Engineer",
+                   hired: "10/12/16",
+                   imgSrc:"9.jpg"
+               },{
+                   name: "Molly Engineer",
+                   title: "Jr Engineer",
+                   hired: "10/12/16",
+                   imgSrc:"10.jpg"
+               }]
 })
 
 .controller('ComplianceCtrl', function($scope) {

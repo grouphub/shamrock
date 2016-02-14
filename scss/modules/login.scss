@@ -1,0 +1,24 @@
+ion-view.login {
+	background-image: url(../img/login.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	ion-content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.scroll {
+			width: 100%;
+		}
+		.login-button {
+			display: block;
+			background-color: $colorBrand;
+			color: #fff;
+			width: 80%;
+			margin: 0 auto;
+			border-radius: 2px;
+			text-transform: uppercase;
+			font-size: 0.88em;
+			letter-spacing: 0.05em; 
+		}
+	}
+}
