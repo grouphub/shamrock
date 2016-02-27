@@ -4,8 +4,8 @@
     <description>
         Launch hackathon demo app
     </description>
-    <author email="you@example.com" href="http://example.com.com/">
-      Your Name Here
+    <author email="michaelaubry1991@gmail.com" href="http://example.com.com/">
+      Michael Aubry
     </author>
     <content src="index.html" />
     <access origin="*" />
